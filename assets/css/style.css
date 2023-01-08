@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+* {
+    font-family: system-ui, sans-serif;
+}
+
 main {
     width: 90%;
     padding: 2rem;
@@ -19,13 +23,52 @@ main {
     column-gap: 5rem;
 
 }
+h1,
+h2,
+h3 {
+    font-weight: 100;
+    text-align: center;
+}
+
+/* Header */
+
+header {
+    display: grid;
+    grid-auto-flow: column;
+    grid-row: 1;
+    grid-column: 1/-1;
+    align-items: center;
+}
+
+h1 {
+    grid-row: 1;
+    grid-column: 1/-1;
+    padding: 0.8rem;
+    background-color: #5a5a5a30;
+
+}
+
+div.brand {
+    grid-column: 1/-1;
+    grid-row: 1;
+    z-index: 1;
+    position: relative;
+
+}
+
+img.logo {
+    width: 8rem;
+}
+
+/* Section Form */
 
 form {
     display: grid;
     width: 70%;
+    grid-template-columns: 70%;
     margin: 0 auto;
     grid-gap: 1rem;
-    padding: 5rem;
+    padding: 4rem;
     place-self: center;
     background-color: rgb(118 67 80 / 95%);
     justify-content: center;
@@ -56,19 +99,11 @@ section {
     width: 100%;
 }
 
-h1 {
-    grid-row: 1;
-    grid-column: 1/-1;
-    padding: 1rem;
-    background-color: #5a5a5a30;
-    margin-bottom: 1rem;
 
-}
+/* Section Calendar  */
 
-h1,
-h2 {
-    font-weight: 100;
-    text-align: center;
+h3 {
+    font-size: 1.4rem;
 }
 
 .calendarBtn {
@@ -92,6 +127,7 @@ h2 {
     display: flex;
     flex-flow: column;
     align-items: center;
+    padding-top: 2rem;
 }
 
 .calendar .days {
@@ -133,6 +169,9 @@ h2 {
     cursor: inherit;
 }
 
+
+/*  Footer */
+
 footer {
     height: 3rem;
     background-color: rgb(103, 103, 103);
@@ -162,6 +201,12 @@ footer {
     footer {
         position: relative;
     }
+    h1 {
+        font-size:1.3rem;
+    }
+    img.logo {
+        width: 6rem;
+    }
 }
 
 /* media for phones */
@@ -172,6 +217,10 @@ footer {
         padding: 0;
         grid-template-rows: 5rem .9fr 1fr;
         row-gap: 1rem;
+    }
+
+    .calendar {
+        padding: 0;
     }
 
     .calendar .days {
@@ -191,16 +240,22 @@ footer {
 
     form {
         font-size: 0.8rem;
-        width: 80%;
-        padding: 1rem;
-        grid-gap: 0.5rem;
-        border-radius: 8px;
-        background-color: rgb(118 67 80 / 80%);
+        width: 90%;
+        padding: 0.3rem;
+        grid-gap: 0.3rem;
+        grid-template-columns: 80%;
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         padding: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+    h3 {
+        font-size: 1rem;
     }
 
     .calendarBtn {
@@ -209,5 +264,8 @@ footer {
 
     input {
         height: 1.5rem;
+    }
+    img.logo {
+        width: 4rem;
     }
 }
