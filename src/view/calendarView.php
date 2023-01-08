@@ -25,8 +25,7 @@
                 <?=@$calendarData['date']; ?>
             </h2>
                 <div class="days">
-                    <?php if (count($errors) === 0 && count($calendarData)
-                    ) {
+                    <?php if (isset($errors) && count($errors) === 0 && isset($calendarData) && count($calendarData) > 0 ) {
                         foreach ($calendarData['arrayDays'] as $day) { ?>
                             <div class="day_name">
                                 <?=$day ?>
